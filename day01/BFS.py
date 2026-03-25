@@ -21,7 +21,7 @@ def bfs(graph, start):
     order = []
 
     while queue:
-        node = queue.poplist()
+        node = queue.popleft()
         order.append(node)
 
         for neighbor in graph[node]:
@@ -40,3 +40,6 @@ graph = {
     'D' : ['B', 'C', 'E'],
     'E' : ['D']
 }
+
+result = bfs(graph, 'A')
+print('방문 순서: ', )
